@@ -1,12 +1,12 @@
 
-package tickets;
+package Views;
 
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.Timer;
 
-public class Cronometro extends javax.swing.JFrame {
+public class Chronometer_View extends javax.swing.JFrame {
     
    private Timer t;
    private int h;
@@ -34,7 +34,7 @@ public class Cronometro extends javax.swing.JFrame {
      * Creates new form Cronometro
      * Estado inicial de la ventana
      */
-    public Cronometro() {
+    public Chronometer_View() {
         initComponents();
         setLocationRelativeTo(null);
         t = new Timer(1000, acciones);
@@ -156,20 +156,21 @@ public class Cronometro extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Cronometro.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Chronometer_View.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Cronometro.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Chronometer_View.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Cronometro.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Chronometer_View.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Cronometro.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Chronometer_View.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Cronometro().setVisible(true);
+                new Chronometer_View().setVisible(true);
             }
         });
     }
