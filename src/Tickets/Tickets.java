@@ -16,14 +16,18 @@ public class Tickets {
     private long client_ID;
     private String Comments;
     private long attEmployee_ID;
-    private String dateHourReceived;
+    private String dateHourIn;
     private String dateHourAttend;
+    private long TimeSpent;
+    private String Subject;
+    
 
-    public Tickets(long ID, long client_ID, String dateHourReceived) {
-        this.ID = ID;
+    public Tickets(String dateHourReceived, long client_ID,String pSubject) {
+        this.ID = ID;// cambiar a static
+        this.Subject = pSubject;
         this.state = "pending";
-        this.client_ID = client_ID;
-        this.dateHourReceived = dateHourReceived;  //aca seria obtenida por el sistema?!! o lo que se escriba??
+        this.client_ID = client_ID; 
+        this.dateHourIn = dateHourReceived;  //aca seria obtenida por el sistema?!! o lo que se escriba??
     }
 
     public String getType() {
@@ -58,12 +62,12 @@ public class Tickets {
     public void setAttEmployee_ID(long attEmployee_ID) {
         this.attEmployee_ID = attEmployee_ID;
     }
-    public String getDateHourReceived() {
-        return dateHourReceived;
+    public String getDateHourIn() {
+        return dateHourIn;
     }
 
-    public void setDateHourReceived(String dateHourReceived) {
-        this.dateHourReceived = dateHourReceived;
+    public void setDateHourIn(String dateHourIn) {
+        this.dateHourIn = dateHourIn;
     }
 
     public String getDateHourAttend() {
@@ -72,6 +76,14 @@ public class Tickets {
 
     public void setDateHourAttend(String dateHourAttend) {
         this.dateHourAttend = dateHourAttend;
+    }
+
+    public long getTimeSpent() {
+        return TimeSpent;
+    }
+
+    public void setTimeSpent(long TimeSpent) {
+        this.TimeSpent = TimeSpent;
     }
     
 }

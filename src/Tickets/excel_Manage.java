@@ -28,7 +28,7 @@ import org.apache.poi.ss.usermodel.Workbook;
  * @author YorleydeMaría
  */
 public class excel_Manage {
-  private static void showExelData(List sheetsData) {
+  public static void showExelData(List sheetsData) {
         //
         // Recorre la lista que contiene las hojas del libro de excel 
         //
@@ -51,9 +51,10 @@ public class excel_Manage {
         }
     }
     
-    private static List readExcel(String path) throws IOException{
-        String path1 = System.getProperty("user.home")+"/ejemploExcelJava.xls";
-        List sheetData = new ArrayList();
+    public static List readExcel(String path) throws IOException{
+        //String path1 = System.getProperty("user.home")+"/ejemploExcelJava.xls";
+        String path1=path;
+        List<List> sheetData = new ArrayList();
         FileInputStream FlujoDeDatos = null;
 
         try {
@@ -176,11 +177,11 @@ public class excel_Manage {
         archivo.close();
         showExelData(readExcel(rutaArchivo));
         /*Y abrimos el archivo con la clase Desktop*/
-       Desktop.getDesktop().open(archivoXLS);
+       Desktop.getDesktop().open(archivoXLS); 
     }
     
     public static void main(String[] args) throws Exception{
-       excel_Manage.createFinalExcel(null,"14052015");
+       excel_Manage.readExcel(System.getProperty("user.home")+"/contraseñas.xls");
         
     } 
     
