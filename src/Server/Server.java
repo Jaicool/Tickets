@@ -3,8 +3,10 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Tickets;
+package Server;
 
+import LogicModel.Tickets;
+import LogicModel.excel_Manage;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
@@ -65,13 +67,19 @@ public class Server {
             List ticket=sheetDataTickets.get(y);
             
             String str=(ticket.get(1).toString());
+            Object tic=(Object)ticket.get(1);
+            String Str=tic.toString();
+            System.out.println(Str);
            // System.out.println(pParameter);
-            long p;
-             long l = Long.parseLong(str);
+//            long p;
+             int l = Integer.parseInt(Str);
             //long p1=p.valueOf(pParameter);
-            System.out.println(l);
-            Tickets newTicket=new Tickets(ticket.get(0).toString(),l,(ticket.get(2)).toString());
-            cubeTickets.add(newTicket);
+           // System.out.println(l);
+            String st = "100";
+    Long lObj2 = Long.valueOf(Str);
+    System.out.println(lObj2);
+            //Tickets newTicket=new Tickets(ticket.get(0).toString(),l,(ticket.get(2)).toString());
+            //cubeTickets.add(newTicket);
         }
         for(int i=0;i<cubeTickets.size();i++){
             System.out.println(cubeTickets.get(i));

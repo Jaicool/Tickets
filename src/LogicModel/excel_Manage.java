@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Tickets;
+package LogicModel;
 
 import java.awt.Desktop;
 import java.io.File;

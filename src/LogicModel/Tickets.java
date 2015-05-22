@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Tickets;
+package LogicModel;
 
 /**
  *
@@ -28,6 +28,13 @@ public class Tickets {
         this.state = "pending";
         this.client_ID = client_ID; 
         this.dateHourIn = dateHourReceived;  //aca seria obtenida por el sistema?!! o lo que se escriba??
+    }
+    public void Print(){
+        System.out.println(dateHourIn+Subject+client_ID);
+    }
+
+    public String getSubject() {
+        return Subject;
     }
 
     public String getType() {
