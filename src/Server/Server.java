@@ -65,24 +65,14 @@ public class Server {
     public void createTickets(){
         for(int y=1; y!=sheetDataTickets.size();y++){
             List ticket=sheetDataTickets.get(y);
-            
             String str=(ticket.get(1).toString());
-            Object tic=(Object)ticket.get(1);
-            String Str=tic.toString();
-            System.out.println(Str);
-           // System.out.println(pParameter);
-//            long p;
-             int l = Integer.parseInt(Str);
-            //long p1=p.valueOf(pParameter);
-           // System.out.println(l);
-            String st = "100";
-    Long lObj2 = Long.valueOf(Str);
-    System.out.println(lObj2);
-            //Tickets newTicket=new Tickets(ticket.get(0).toString(),l,(ticket.get(2)).toString());
-            //cubeTickets.add(newTicket);
+            double st= Double.valueOf(str);
+            long parameter= (long) st;
+            Tickets newTicket=new Tickets(ticket.get(0).toString(),parameter,(ticket.get(2)).toString());
+            cubeTickets.add(newTicket);
         }
         for(int i=0;i<cubeTickets.size();i++){
-            System.out.println(cubeTickets.get(i));
+            cubeTickets.get(i).Print();
         }
     }
         

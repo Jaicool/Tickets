@@ -83,6 +83,7 @@ public class excel_Manage {
                 List data = new ArrayList();
                 while (cells.hasNext()) {
                     HSSFCell cell = (HSSFCell) cells.next();
+                    //String cel=cell.toString();
                 //  System.out.println("Añadiendo Celda: " + cell.toString());
                     data.add(cell);
                 }

@@ -26,7 +26,7 @@ public class Tickets {
         this.ID = ID;// cambiar a static
         this.Subject = pSubject;
         this.state = "pending";
-        this.client_ID = client_ID; 
+        this.client_ID = (client_ID); 
         this.dateHourIn = dateHourReceived;  //aca seria obtenida por el sistema?!! o lo que se escriba??
     }
     public void Print(){
